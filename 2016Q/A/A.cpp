@@ -1,6 +1,4 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
 
 using namespace std;
@@ -9,16 +7,15 @@ int line;
 bool handled[10];
 
 void inc(int foo) {
-	while (foo) {
-		handled[foo % 10] = true;
-		foo /= 10;
-	}
+   while (foo) {
+      handled[foo % 10] = true;
+      foo /= 10;
+   }
 }
 
 int main()
 {
    cin >> total;
-   //cout << total << endl;
    for (int i=0; i<total; ++i)
    {
       cin >> line;
@@ -46,7 +43,6 @@ int main()
             }
 
          }
-
       }
    }
    return 0;
